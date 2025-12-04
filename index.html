@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokemon Battle - Web UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pokémon Battle (Web)</h1>
+    </header>
+    <main>
+      <section class="selectors">
+        <div>
+          <h3>Chọn Pokémon của bạn</h3>
+          <select id="playerSelect"></select>
+        </div>
+        <div>
+          <h3>Chọn Đối thủ</h3>
+          <select id="enemySelect"></select>
+        </div>
+        <button id="startBtn">Bắt đầu trận đấu</button>
+      </section>
+
+      <section class="arena" aria-live="polite">
+        <div class="pokemon" id="playerBox">
+          <div class="sprite" id="playerSprite"></div>
+          <div class="info">
+            <h2 id="playerName">-</h2>
+            <div class="hpbar"><div class="hp" id="playerHp"></div></div>
+            <div class="hptext" id="playerHpText"></div>
+          </div>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="pokemon" id="enemyBox">
+          <div class="sprite" id="enemySprite"></div>
+          <div class="info">
+            <h2 id="enemyName">-</h2>
+            <div class="hpbar"><div class="hp" id="enemyHp"></div></div>
+            <div class="hptext" id="enemyHpText"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="log">
+        <h3>Log trận đấu</h3>
+        <div id="logArea"></div>
+        <button id="resetBtn">Reset</button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
